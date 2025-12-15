@@ -1,14 +1,25 @@
-:root { /*aqui estams definindo a estrutura básica para as variáveis de CSS dentro da pseudoclasse :root*/
+@font-face { /*o fonte face é usado para guardar uma familia de fontes que escolheu no google fonts e usar ela em seu projeto*/
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf"); /*aqui estamos colocando o endereço da fonte que colocamos no projeto*/
+    font-style: normal;
+    font-display: swap; /*colocando aqui a opção de fonte secundária caso a primeira nçao funcione*/
+}
+
+:root { /*aqui estamos definindo a estrutura básica para as variáveis de CSS dentro da pseudoclasse :root*/
     /*podemos depois mudar atraves das variaveis pois trocaremos as cores quando quisermos por elementos*/
-    --background-primary-color: #ffffff;
+    --primary-color: #BF0101; /*todas as cores dos botões que iremos usar*/
+    --secondary-color: #B81515;
+    
+    --background-primary-color: #ffffff; /*todas as cores de fundo que iremos usar*/
     --background-secondary-color: #f5f5f5;
     --background-tertiary-color: #000000;
 
-    --button-primary-color: #BF0101;
-    --button-secondary-color: #B81515;
-
-    --text-primary-color: #222222;
+    --text-primary-color: #222222; /*todas as cores de texto que iremos usar*/
     --text-secondary-color: #FFFFFF;
+
+    --title-weight:700; /*todas ps pesos das fontes que vamos usar*/
+    --text-weight:400;
+    --text-text-weight:500;
 }
 
 /* CSS RESET */
@@ -20,3 +31,8 @@ body, img, h1, p, fieldset, legend, label, input, select, textarea, button {
     box-sizing: border-box;
 }
 
+h1 {
+    font-family: "Montserrat";
+    font-weight: var(--title-weight);
+    color: var(--primary-color);
+}
