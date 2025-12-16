@@ -1,9 +1,12 @@
 header {
-  width: 100%; /*usando toda a tela da plataforma*/
-  height: 138px; /*usando o tamnaho de altura do projeto*/
   background-color: var(
     --background-tertiary-color
   ); /*colocando a cor da variavel que criamos e está no global.css*/
+  display: flex; /*aqui colocamos esta propriedade para deixa o headre automatico para as telas*/
+  flex-direction: row; /*adicionamos esta propriedade para colocar os dados do header em linha*/
+  justify-content: space-between; /*adicionamos esta propriedade para colocar espaços entre eles */
+  align-items: flex-start;
+  padding: 38px 48px;
 }
 
 .logo {
@@ -12,5 +15,12 @@ header {
   display: inline-block; /*colocamos isso pois a tag é uma tag inline assim bloqueamos ela para o tamanho que vamos usar*/
   width: 68px;
   height: 64px;
-  margin: 37px 0 0 48px;
+}
+
+.navigation-menu {
+  margin-top: 24px;
+}
+
+nav {
+  display: none; /*aqui colocacamos esta propriedade para esconder o menu escrito pois ele deve aparecer ao clicar no menu de hamburguer*/
 }
