@@ -21,6 +21,11 @@ header {
   margin-top: 24px;
 }
 
+input[type="checkbox"]:checked ~ nav {
+  /*aqui colocamos uma forma de fazer aparacer o menhu ao clicar na caixa ou checkbox*/
+  display: block;
+}
+
 nav {
   display: none; /*aqui colocacamos esta propriedade para esconder o menu escrito pois ele deve aparecer ao clicar no menu de hamburguer*/
 }
