@@ -7,6 +7,7 @@ header {
   justify-content: space-between; /*adicionamos esta propriedade para colocar espaços entre eles */
   align-items: flex-start;
   padding: 38px 48px;
+  position: relative; /*colocando este parametro conseguimos controlar seu posicionamento em relação ao topo e à esquerda*/
 }
 
 .logo {
@@ -24,8 +25,27 @@ header {
 input[type="checkbox"]:checked ~ nav {
   /*aqui colocamos uma forma de fazer aparacer o menhu ao clicar na caixa ou checkbox*/
   display: block;
+  position: absolute; /*No nav, usaremos position: absolute, permitindo que ele se posicione relativamente ao cabeçalho, que tem position: relative.*/
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--background-tertiary-color);
 }
 
 nav {
   display: none; /*aqui colocacamos esta propriedade para esconder o menu escrito pois ele deve aparecer ao clicar no menu de hamburguer*/
+}
+
+.list-links {
+  list-style: none; /*aqui estamos tirando o estilo da lista que são os ponto, numeros, quadrados etc*/
+}
+
+.list-links li {
+  margin: 16px 0;
+}
+
+.list-links li a {
+  /*aqui colocamos a classe criada para modificar os icones de navegação como filho*/
+  color: var(--text-secondary-color);
+  text-decoration: none; /*aqui estamos tirando a decoração inicial que neste caso são as linhas dos links*/
 }
