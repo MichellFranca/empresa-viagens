@@ -1,0 +1,16 @@
+header {
+  width: 100%; /*usando toda a tela da plataforma*/
+  height: 138px; /*usando o tamnaho de altura do projeto*/
+  background-color: var(
+    --background-tertiary-color
+  ); /*colocando a cor da variavel que criamos e está no global.css*/
+}
+
+.logo {
+  /*só temos aqui temos o uso para esta classe dos estilos abaixo*/
+  /*criando estilo para a tag a de tamanho e altura da imagem que estamos utilizando*/
+  display: inline-block; /*colocamos isso pois a tag é uma tag inline assim bloqueamos ela para o tamanho que vamos usar*/
+  width: 68px;
+  height: 64px;
+  margin: 37px 0 0 48px;
+}
