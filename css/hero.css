@@ -1,0 +1,23 @@
+.hero-img {
+  height: 400px; /*aqui estamos deixando a altura para a imagem que estou usando para imagem de fundo*/
+  width: 100%; /*aqui estamos deixando cem porcento da imagem*/
+  background-image: url("../img/hero-mobile.jpg"); /*aqui estamos usando a imagem como imagem de fundo*/
+  background-repeat: no-repeat; /*aqui não deixaremos a imagem se repetir caso a tela seja maior*/
+  background-size: cover; /*aqui estamos ddeixando a imagem para ocupar toda a página com a responsividade*/
+}
+
+@media screen and (min-width: 768px) {
+  .hero-img {
+    height: 620px;
+    background: url(../img/hero-tablet.jpg) no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-img {
+    height: 620px;
+    background: url(../img/hero-desktop.jpg) no-repeat;
+    background-size: cover;
+  }
+}
