@@ -1,0 +1,129 @@
+header {
+  background-color: var(
+    --background-tertiary-color
+  ); /*colocando a cor da variavel que criamos e está no global.css*/
+  display: flex; /*aqui colocamos esta propriedade para deixa o headre automatico para as telas*/
+  flex-direction: row; /*adicionamos esta propriedade para colocar os dados do header em linha*/
+  justify-content: space-between; /*adicionamos esta propriedade para colocar espaços entre eles */
+  align-items: flex-start;
+  padding: 38px 48px;
+  position: relative; /*colocando este parametro conseguimos controlar seu posicionamento em relação ao topo e à esquerda*/
+}
+
+.logo {
+  /*só temos aqui temos o uso para esta classe dos estilos abaixo*/
+  /*criando estilo para a tag a de tamanho e altura da imagem que estamos utilizando*/
+  display: inline-block; /*colocamos isso pois a tag é uma tag inline assim bloqueamos ela para o tamanho que vamos usar*/
+  width: 68px;
+  height: 64px;
+}
+
+.img-mobile {
+  /*usamos a classe para bloquear o aparecimento da logo mobile*/
+  display: block;
+}
+
+.img-desktop {
+  /*usamos a classe para não mostrar a logo ddo desktop*/
+  display: none;
+}
+
+.navigation-menu {
+  margin-top: 24px;
+}
+
+input[type="checkbox"]:checked ~ nav {
+  /*aqui colocamos uma forma de fazer aparacer o menhu ao clicar na caixa ou checkbox*/
+  display: block;
+  position: absolute; /*No nav, usaremos position: absolute, permitindo que ele se posicione relativamente ao cabeçalho, que tem position: relative.*/
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--background-tertiary-color);
+}
+
+nav {
+  display: none; /*aqui colocacamos esta propriedade para esconder o menu escrito pois ele deve aparecer ao clicar no menu de hamburguer*/
+}
+
+.list-links {
+  list-style: none; /*aqui estamos tirando o estilo da lista que são os ponto, numeros, quadrados etc*/
+}
+
+.list-links li {
+  margin: 16px 0;
+}
+
+.list-links li a {
+  /*aqui colocamos a classe criada para modificar os icones de navegação como filho*/
+  color: var(--text-secondary-color);
+  text-decoration: none; /*aqui estamos tirando a decoração inicial que neste caso são as linhas dos links*/
+}
+
+/*neste código abaixo vamos colocar o tamanho para visualização do site em um tablet*/
+
+@media screen and (min-width: 768px) {
+  .navigation-menu {
+    margin-top: 0;
+  }
+}
+
+.navigation-menu label {
+  /*no caso do tablet escondemos o menu de hamburguer*/
+  display: none;
+}
+
+.navigation-menu nav {
+  display: block;
+}
+
+.navigation-menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.navigation-menu {
+  margin-top: 0;
+  width: 467px;
+}
+
+.list-links li a {
+  color: var(--text-secondary-color);
+  text-decoration: none;
+  font-weight: var(--menu-text-weight);
+  font-size: 24px;
+}
+
+.navigation-menu li {
+  margin: 0;
+}
+
+/*neste código abaixo vamos colocar o tamanho para visualização do site em um desktop*/
+
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 38px 120px;
+  }
+  .logo {
+    width: 260;
+    height: 64;
+  }
+  .img-desktop {
+    display: block;
+  }
+  .img-mobile {
+    display: none;
+  }
+  .navigation-menu a:hover {
+    color: var(--primary-color);
+  }
+}
+
+/*aqui coloquei o header para os menus logos na minha resolução de tela*/
+@media screen and (min-width: 1536px) {
+  header {
+    padding: 38px 128px;
+  }
+}

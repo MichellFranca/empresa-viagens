@@ -3,8 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href=".css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Empresa de Viagens</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <a class="logo" href="index.html" title="voltar para a página principal">
+        <!--aqui vamos começar a usar classes para criar estilo especifico para aquele conjunto pois temos outras tgs a (usamos class="")-->
+        <img
+          class="img-mobile"
+          src="img/bussola.jornada-branca.png"
+          alt="Bussola do logo Empresa Viagens na cor preta"
+        />
+        <img
+          class="img-desktop"
+          src="img/bussola-texto-jornada-branca.png"
+          alt="logo empresa viagens na cor branca"
+        />
+        <!--Logo do projeto na parte do header-->
+      </a>
+      <div class="navigation-menu">
+        <label for="menu">
+          <img src="img/menu.png" alt="menu" />
+        </label>
+        <input type="checkbox" id="menu" hidden />
+        <!--aqui colocando o hidden escondemos a checkbox no navegador-->
+        <!--usando o menu estilo hamburguer-->
+        <nav>
+          <!--menu de navegação utilizando a tag semântica nav-->
+          <ul class="list-links">
+            <!--colocando a tag de ordenação dos links-->
+            <li>
+              <a href="blog.html" target="_blank" title="acessar blog">Blog</a>
+            </li>
+            <!--criando o li para lista-->
+            <li>
+              <a href="pacotes.html" target="_blank" title="acessar pacotes"
+                >Pacotes de viagem</a
+              >
+            </li>
+            <!--usamos o target blank para abri a página de acesso em outra página separada-->
+            <li>
+              <a href="contato.html" target="_blank" title="acessar contatos"
+                >Contato</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </body>
 </html>
