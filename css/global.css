@@ -51,4 +51,28 @@ h1 {
 
 body {
   font-family: "Montserrat"; /*aqui estamos colocando uma familiza de fonte única pois no body só usaremos uma*/
+  color: var(
+    --text-primary-color
+  ); /*aqui colocamos a cor que será usada em todos os textos do body pois ele neste caso será o mesmo*/
+}
+
+.section-title h2 {
+  font-size: 28px;
+  font-weight: var(--title-weight);
+  margin: 0;
+  text-align: center;
+}
+
+.section-title hr {
+  width: 180px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  border: none;
+  margin: 16px auto 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-title h2 {
+    font-size: 32px;
+  }
 }
